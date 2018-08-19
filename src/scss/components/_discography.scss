@@ -1,0 +1,91 @@
+.Discography {
+    text-transform: uppercase;
+    color: #fff;
+    padding-bottom: 2em;
+    background: url('../img/city.jpg') center / cover no-repeat;
+    position: relative;
+
+    &:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(#000,.5);
+    }
+
+    @media screen and (max-width: $bp-m) {
+        margin-top: 70em;
+    }
+
+    &-containerInfo,
+    &-containerGallery {
+        max-width: $max-container;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        z-index: 50;
+    }
+
+    &-containerInfo {
+        text-align: center;
+    }
+
+    &-title {
+        margin-bottom: 0;
+        margin-top: 0;
+        padding-top: 2em;
+    }
+
+    &-description {
+        font-size: .7em;
+    }
+
+    &-containerGallery {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-gap: 10px;
+        text-align: center;
+
+        @media screen and (min-width: $bp-m) {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+        }
+
+        @media screen and (min-width: $bp-l) {
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: repeat(1, 1fr);
+        }
+    }
+
+    &-feature {
+        padding-bottom: 1em;
+
+        &Img {
+            margin: 0;
+            & img {
+                display: block;
+                width: 100%;
+                height: 130px;
+                margin-bottom: .7em;
+            }
+
+            & figcaption {
+                font-size: .7em;
+                margin-bottom: .7em;
+            }
+        }
+
+        &Button {
+            background: transparent;
+            border: 1px solid rgba(#fff, .7);
+            padding: .3em .4em;
+            color: #fff;
+
+            &:hover {
+                background-color: rgba(#FFF,.5);
+                color: #333;
+            }
+        }
+    }
+}
